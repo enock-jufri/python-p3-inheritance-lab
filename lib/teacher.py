@@ -20,7 +20,7 @@ class Teacher(User):
         super().__init__(first_name, last_name)
         self.knowledge=knowledge
     def teach(self):
-        return random.choice(knowledge)
+        return knowledge[random.randint(0,len(knowledge)-1)]
     
 teacher=Teacher("mr","job")
 print(teacher.knowledge)
